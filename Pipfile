@@ -12,6 +12,7 @@ pandas = "*"
 scipy = "*"
 numpy = "*"
 pyaml = "*"
+awsebcli = "*"
 
 [dev-packages]
 

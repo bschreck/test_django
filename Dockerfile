@@ -8,6 +8,8 @@ ENV PYTHONUNBUFFERED 1
 # Set work directory
 WORKDIR /code
 
+EXPOSE 8080
+
 # Install dependencies
 RUN pip install --upgrade pip
 RUN pip install pipenv
