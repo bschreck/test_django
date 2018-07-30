@@ -1,0 +1,12 @@
+- model: credsite.company
+  pk: 1
+  fields:
+    name: Virgin Hyperloop One
+    description: We build hyperloops in CA
+    brief_description: We build hyperloops
+- model: credsite.company
+  pk: 2
+  fields:
+    name: Hyperloop Transport Technologies
+    description: We build hyperloops around the world
+    brief_description: Distributed hyperloop

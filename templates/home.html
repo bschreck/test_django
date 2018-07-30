@@ -1,0 +1,6 @@
+<h1>Homepage</h1>
+<ul>
+  {% for company in object_list %}
+    <li><b>{{ company.name }}</b> {{ company.brief_description }}</li>
+  {% endfor %}
+</ul>
