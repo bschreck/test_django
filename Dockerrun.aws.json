@@ -14,12 +14,6 @@
       "image": "512298914400.dkr.ecr.us-west-1.amazonaws.com/credsite/testdjangoproject:latest2",
       "essential": true,
       "memory": 128,
-      "environment": [
-        {
-          "name": "SECRET_KEY",
-          "value": "changemeinprod"
-        }
-      ],
       "portMappings": [
         {
           "hostPort": 8080,
