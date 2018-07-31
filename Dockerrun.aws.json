@@ -6,12 +6,6 @@
       "host": {
         "sourcePath": "/code"
       }
-    },
-    {
-      "name": "db-data",
-      "host": {
-        "sourcePath": "postgres_data"
-      }
     }
   ],
   "containerDefinitions": [
@@ -40,22 +34,6 @@
         {
           "sourceVolume": "web-app",
           "containerPath": "/code",
-          "readOnly": true
-        }
-      ]
-    },
-    {
-      "name": "db",
-      "image": "postgres:11-alpine",
-      "essential": true,
-      "memory": 128,
-      "links": [
-        "web-app"
-      ],
-      "mountPoints": [
-        {
-          "sourceVolume": "db-data",
-          "containerPath": "/var/lib/postgresql/data",
           "readOnly": true
         }
       ]
