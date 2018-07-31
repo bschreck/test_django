@@ -36,9 +36,6 @@
           "containerPort": 8080
         }
       ],
-      "links": [
-        "db"
-      ],
       "mountPoints": [
         {
           "sourceVolume": "web-app",
