@@ -14,16 +14,6 @@
       "image": "512298914400.dkr.ecr.us-west-1.amazonaws.com/credsite/testdjangoproject:latest2",
       "essential": true,
       "memory": 128,
-      "command": [
-        "/bin/bash",
-        "/code/run_prod.sh"
-      ],
-      "environment": [
-        {
-          "name": "SECRET_KEY",
-          "value": "changemeinprod"
-        }
-      ],
       "portMappings": [
         {
           "hostPort": 8080,
