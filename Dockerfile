@@ -10,11 +10,9 @@ WORKDIR /code
 
 EXPOSE 8080
 
-# Install dependencies
-RUN pip install --upgrade pip
-RUN pip install pipenv
-COPY ./Pipfile /code/Pipfile
-RUN pipenv install --deploy --system --skip-lock --dev
-
 # Copy project
 COPY . /code/
+
+# Install dependencies
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt

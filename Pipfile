@@ -13,6 +13,9 @@ scipy = "*"
 numpy = "*"
 pyaml = "*"
 awsebcli = "*"
+aws = "*"
+awscli = "*"
+"boto3" = "*"
 
 [dev-packages]
 
