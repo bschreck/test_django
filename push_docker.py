@@ -15,6 +15,6 @@ client.login(username, password, registry=registry)
 
 img_id ='credsite/testdjangoproject'
 img, logs = client.images.build(path='.', tag=img_id)
-registry_with_name = registry + '/' + img_id
-img.tag(registry_with_name + ':latest', tag=img_id + ':latest')
-img.push(registry_with_name, tag='latest')
+registry_with_name = registry.replace('https://', '') + '/' + img_id
+img.tag(registry_with_name, tag='latest2')
+client.images.push(registry_with_name, tag='latest2')

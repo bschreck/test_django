@@ -11,7 +11,7 @@
   "containerDefinitions": [
     {
       "name": "web-app",
-      "image": "512298914400.dkr.ecr.us-west-1.amazonaws.com/credsite/testdjangoproject",
+      "image": "512298914400.dkr.ecr.us-west-1.amazonaws.com/credsite/testdjangoproject:latest2",
       "essential": true,
       "memory": 128,
       "command": [
