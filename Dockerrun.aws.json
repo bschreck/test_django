@@ -4,13 +4,13 @@
     {
       "name": "web-app",
       "host": {
-        "sourcePath": "/var/app/current"
+        "sourcePath": "/code"
       }
     },
     {
       "name": "db-data",
       "host": {
-        "sourcePath": "/var/app/current/postgres_data"
+        "sourcePath": "postgres_data"
       }
     }
   ],
