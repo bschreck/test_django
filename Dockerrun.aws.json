@@ -1,13 +1,5 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "volumes": [
-    {
-      "name": "web-app",
-      "host": {
-        "sourcePath": "/code"
-      }
-    }
-  ],
   "containerDefinitions": [
     {
       "name": "web-app",
@@ -18,12 +10,6 @@
         {
           "hostPort": 8080,
           "containerPort": 8080
-        }
-      ],
-      "mountPoints": [
-        {
-          "sourceVolume": "web-app",
-          "containerPath": "/code"
         }
       ]
     }
