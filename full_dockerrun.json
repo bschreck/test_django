@@ -2,12 +2,6 @@
   "AWSEBDockerrunVersion": 2,
   "volumes": [
     {
-      "name": "web-app",
-      "host": {
-        "sourcePath": "/code"
-      }
-    },
-    {
       "name": "db-data",
       "host": {
         "sourcePath": "postgres_data"
@@ -19,7 +13,7 @@
       "name": "web-app",
       "image": "512298914400.dkr.ecr.us-west-1.amazonaws.com/credsite/testdjangoproject",
       "essential": true,
-      "memory": 128,
+      "memory": 256,
       "command": [
         "/bin/bash",
         "/code/run-prod.sh"
@@ -39,8 +33,7 @@
       "mountPoints": [
         {
           "sourceVolume": "web-app",
-          "containerPath": "/code",
-          "readOnly": true
+          "containerPath": "/code"
         }
       ]
     },
@@ -48,15 +41,14 @@
       "name": "db",
       "image": "postgres:11-alpine",
       "essential": true,
-      "memory": 128,
+      "memory": 256,
       "links": [
         "web-app"
       ],
       "mountPoints": [
         {
           "sourceVolume": "db-data",
-          "containerPath": "/var/lib/postgresql/data",
-          "readOnly": true
+          "containerPath": "/var/lib/postgresql/data"
         }
       ]
     }
